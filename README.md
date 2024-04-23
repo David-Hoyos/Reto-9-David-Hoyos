@@ -130,3 +130,48 @@ if __name__ == "__main__":
 ```
 ## Punto 4 
 Utilice la siguiente plantilla de code para contar el tiempo:
+```python
+import time
+
+start_time = time.time()
+# instrucciones sobre las cuales se quiere medir tiempo de ejecución
+end_time = time.time()
+
+timer = end_time - start_time
+print(timer)
+```
+```python
+import time #Se importa time.
+
+def fibonacci(n : int )-> int: #Se define la funcion.
+  if n <=1:
+    # caso base
+    return 1 
+  else:
+    # condición
+    return fibonacci(n-1)+fibonacci(n-2)  
+#Se inician timer y number en 0
+timer=0 
+number = 0
+while timer<=10: #Se establece que el "tiempo significativo" es más de 10 segundos, así que se hace el cáculo para los números que tome menos de 10 segundos.
+    start_time = time.time() #Tiempo de inicio
+    serie_fibonacci = fibonacci(number) #Se evalúa la función fibonacci con number.
+    print(f"El numero de la serie de Fibonacci en la posicion {number} es {serie_fibonacci}")
+    end_time = time.time() #Tiempo final.
+    timer = end_time - start_time #Tiempo que tomó hallar el número en la posición.
+    print(timer) #Se imprime el tiempo.
+    number+=1 #Se suma 1 a number para continuar con el siguiente número.
+print("Si tomamos como tiempo significativo 10 segundos, el tiempo empieza a ser significativo en el término",number-1,"de la serie.")
+#Desde el termino 40 el tiempo empieza a ser significativo
+
+```
+Tras realizar pruebas me pude dar cuenta que el tiempo empieza a ser significativo desde el termino 40.
+
+## Punto 5
+Crear cuenta en stackoverflow y adjuntar imagen en el repo.
+[![Captura-de-pantalla-2024-04-22-220310.png](https://i.postimg.cc/KzYYvTNs/Captura-de-pantalla-2024-04-22-220310.png)](https://postimg.cc/VS3wKd2j)
+
+## Punto 6
+Cosas de adultos....ir a linkedin y crear perfil....NO IMPORTA que estén iniciando, si tienen tiempo para redes poco útiles como fb, insta, o tiktok tienen tiempo para crear un perfil mamalón. Dejar enlace en el repo.
+
+www.linkedin.com/in/david-santiago-hoyos-mateus-154407305
