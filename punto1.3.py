@@ -1,9 +1,16 @@
-try:
-    if __name__=="__main__":
-        a = int(input("Por favor ingrese un numero:"))
-        b = a-1
-        factorial = lambda a: 1 if a == 0 else a* factorial(a-1)
-        print(f"El factorial de {a} es {factorial(a)}")
-except:
-    ValueError
-    print("No ingresaste un numero valido")
+if __name__ == "__main__":
+
+    #Le pedimos al usuario la cantidad actual de contagiados
+    contagiados = int(input("Cantidad de contagiados actuales"))
+
+    #Le pedimos al usuario la cantidad de días para estimar el número de enfermos
+    dias = int(input("Cantidad de días a estimar el número de enfermos"))
+
+    # Calculamos el total de contagios utilizando la fórmula dada
+    contagios = (lambda x, y: x * 2 ** y)(contagiados, dias)
+
+    # Mostramos los días para estimar la cantidad de enfermos
+    print(f"Los días a estimar la cantidad de enfermos son {dias}")
+
+    # Mostramos el número de personas contagiadas
+    print(f"El número de personas contagiadas será {contagios}")
